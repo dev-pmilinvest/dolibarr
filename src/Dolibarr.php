@@ -15,7 +15,7 @@ class Dolibarr
 
         $curl = curl_init();
         $httpheader = ['DOLAPIKEY: ' .$this->token];
-        $url = config('app.dolibarr.dolibarr_server')."/api/index.php/" . $url;
+        $url = config('dolibarr.dolibarr_server')."/api/index.php/" . $url;
 
         switch ($method)
         {
@@ -40,10 +40,13 @@ class Dolibarr
                 if ($data)
                     $url = sprintf("%s?%s", $url, http_build_query($data));
         }
-
         // Optional Authentication:
-        //    curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
-        //    curl_setopt($curl, CURLOPT_USERPWD, config('dolibar.dolibar_api_user') .":" . config('dolibar.dolibar_api_password'));
+        if(config('dolibarr.dolibarr_use_auth') == 'YES')
+        {
+            curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
+            curl_setopt($curl, CURLOPT_USERPWD, config('dolibarr.dolibarr_api_user') .":" . config('dolibarr.dolibarr_api_password'));
+        }
+
         curl_setopt($curl, CURLOPT_URL, $url);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($curl, CURLOPT_HTTPHEADER, $httpheader);
@@ -79,9 +82,14 @@ class Dolibarr
         $httpheader = [];
         $url = config('dolibarr.dolibarr_server')."/api/index.php/login";
         curl_setopt($curl, CURLOPT_POSTFIELDS, $loginParam);
+
+
         // Optional Authentication:
-        //    curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
-        //    curl_setopt($curl, CURLOPT_USERPWD, config('dolibar.dolibar_api_user') .":" . config('dolibar.dolibar_api_password'));
+        if(config('dolibarr.dolibarr_use_auth') == 'YES')
+        {
+            curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
+            curl_setopt($curl, CURLOPT_USERPWD, config('dolibarr.dolibarr_api_user') .":" . config('dolibarr.dolibarr_api_password'));
+        }
 
 
         curl_setopt($curl, CURLOPT_URL, $url);
@@ -91,11 +99,9 @@ class Dolibarr
         $tokenResult = json_decode(curl_exec($curl), true);
         curl_close($curl);
 
-
         if (isset($tokenResult["success"]) && $tokenResult["success"]["code"] == "200") {
             $token = $tokenResult["success"]["token"];
         }
-
         $this->token = $token;
     }
 
@@ -108,9 +114,8 @@ class Dolibarr
                 "sqlfilters" => "(t.nom:like:'%".$societe."%')"
             )
         ));
-        dd($result);
 
-        if (isset($result["error"]) ) {
+        if ($result == null OR isset($result["error"]) ) {
             return [];
         }
         return $result;
@@ -126,7 +131,7 @@ class Dolibarr
             )
         ));
 
-        if (isset($result["error"]) ) {
+        if ($result == null OR isset($result["error"]) ) {
             return [];
         }
         return $result;
