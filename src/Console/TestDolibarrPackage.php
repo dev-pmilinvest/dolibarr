@@ -16,8 +16,8 @@ class TestDolibarrPackage extends Command
         $this->choix = $this->choice(
             'Choisir la fonction API',
             [
-                'getTiers' => 'getTiers()',
-                'getContacts' =>  'getContacts()',
+//                'getTiers' => 'getTiers()',
+//                'getContacts' =>  'getContacts()',
                 'configuration' =>  'Voir la configuration',
                 'quitter' =>  'QUITTER',
             ]);
