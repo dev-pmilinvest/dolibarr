@@ -1,0 +1,52 @@
+{
+    "name": "pmilinvest/dolibarr",
+    "description": "DOLIBARR LARAVEL SDK",
+    "keywords": [
+        "pmilinvest",
+        "dolibarr"
+    ],
+    "homepage": "https://github.com/pmilinvest/dolibarr",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "PMIL Invest",
+            "email": "dev3.info@pmilinvest.fr",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "*"
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Pmilinvest\\Dolibarr\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Pmilinvest\\Dolibarr\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Pmilinvest\\Dolibarr\\DolibarrServiceProvider"
+            ],
+            "aliases": {
+                "Dolibarr": "Pmilinvest\\Dolibarr\\DolibarrFacade"
+            }
+        }
+    }
+}
