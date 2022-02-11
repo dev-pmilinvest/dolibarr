@@ -14,34 +14,54 @@ Vous pouvez installer le package avec composer:
 composer require pmilinvest/dolibarr
 ```
 
-## Usage
+## Configuration
 
 ```php
-// Usage description here
+#Configuration DOLIBAR API
+DOLIBARR_SERVER=https://XXX.XXX.XXX.XXX
+DOLIBARR_API_KEY=XXXXXXXXXXXXXXXXXXXXXXX
+DOLIBARR_USE_AUTH=NO
+DOLIBARR_API_USER=XXXXXXX
+DOLIBARR_API_PASSWORD=XXXXXXXX
 ```
 
-### Testing
 
-```bash
-composer test
+
+
+## Usage
+Vous pouvez vérifier que votre connection à l'API Dolibarr fonctionne en utilisan la commande artisan :
+```php
+ php artisan dolibarr:test
 ```
 
-### Changelog
+Utilisez les fleches pour choisir l'option "Voir la configuration"
 
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
+```php
+PMIL Invest Laravel Dolibarr Package
+====================================
 
-## Contributing
+MENU DES FONCTIONS API Dolibarr
+===============================
 
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
+Choisir la fonction API:
+[configuration] Voir la configuration
+[quitter      ] QUITTER
+> Voir la configuration
 
-### Security
++-------------+------------------------------------------+
+| Nom         | Valeur                                   |
++-------------+------------------------------------------+
+| API Url     | https://XXX.XXX.XXX.XXX/api/index.php    |
+| Utilisateur | XXXXXXX                                  |
+| Password    | XXXXXXX                                  |
+| Token       | XXXXXXXXXXXXXXXXXXXXXXX                  |
++-------------+------------------------------------------+
 
-If you discover any security related issues, please email dev3.info@pmilinvest.fr instead of using the issue tracker.
+```
 
 ## Credits
 
 -   [PMIL Invest](https://github.com/pmilinvest)
--   [All Contributors](../../contributors)
 
 ## License
 
