@@ -4,7 +4,7 @@ namespace Pmilinvest\Dolibarr;
 
 use Illuminate\Support\ServiceProvider;
 use Pmilinvest\Dolibarr\Console\InstallDolibarrPackage;
-use Pmilinvest\Dolibarr\Console\TestDolibarrPackage;
+use Pmilinvest\Dolibarr\Console\TestDolibarrPackage ;
 
 class DolibarrServiceProvider extends ServiceProvider
 {
@@ -43,8 +43,8 @@ class DolibarrServiceProvider extends ServiceProvider
 
             // Registering package commands.
              $this->commands([
-                 InstallDolibarrPackage ::class,
-                 TestDolibarrPackage ::class,
+                 InstallDolibarrPackage::class,
+                 TestDolibarrPackage::class,
              ]);
         }
     }
