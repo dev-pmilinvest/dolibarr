@@ -43,7 +43,8 @@ class DolibarrServiceProvider extends ServiceProvider
 
             // Registering package commands.
              $this->commands([
-                 InstallDolibarrPackage::class
+                 InstallDolibarrPackage::class,
+                 TestDolibarrPackage::class
              ]);
 //
 //             $this->commands([
