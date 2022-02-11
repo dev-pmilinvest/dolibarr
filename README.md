@@ -34,9 +34,10 @@ Vous pouvez vérifier que votre connection à l'API Dolibarr fonctionne en utili
  php artisan dolibarr:test
 ```
 
-Utilisez les fleches pour choisir l'option "Voir la configuration"
+Utilisez les flèches du clavier pour choisir l'option "Voir la configuration"
 
-```php
+Si le token esr renseigné alors tout va bien !
+```
 PMIL Invest Laravel Dolibarr Package
 ====================================
 
