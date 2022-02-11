@@ -1,5 +1,4 @@
 <?php
-
 namespace Pmilinvest\Dolibarr\Console;
 
 use Illuminate\Console\Command;
