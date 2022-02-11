@@ -77,7 +77,7 @@ class Dolibarr
         $loginParam = ["login" => $login, "password" =>  $password, "reset" => $reset];
         $curl = curl_init();
         $httpheader = [];
-        $url = config('app.dolibarr.dolibarr_server')."/api/index.php/login";
+        $url = config('dolibarr_server')."/api/index.php/login";
         curl_setopt($curl, CURLOPT_POSTFIELDS, $loginParam);
         // Optional Authentication:
         //    curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);

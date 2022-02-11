@@ -95,7 +95,7 @@ class TestDolibarrPackage extends Command
             $this->showMenu();
         }
 
-        $this->output->succes('Terminé');
+
         return 0;
     }
 }
