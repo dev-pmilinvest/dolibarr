@@ -7,7 +7,7 @@ class Dolibarr
     public $token = null;
 
     public function __construct(){
-        $this->login( config('dolibarr_api_user'),  config('dolibarr_api_password')); // set the token
+        $this->login( config('dolibarr.dolibarr_api_user'),  config('dolibarr.dolibarr_api_password')); // set the token
     }
 
     public function CallAPI($method, $url, $data = false)
@@ -77,7 +77,7 @@ class Dolibarr
         $loginParam = ["login" => $login, "password" =>  $password, "reset" => $reset];
         $curl = curl_init();
         $httpheader = [];
-        $url = config('dolibarr_server')."/api/index.php/login";
+        $url = config('dolibarr.dolibarr_server')."/api/index.php/login";
         curl_setopt($curl, CURLOPT_POSTFIELDS, $loginParam);
         // Optional Authentication:
         //    curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
