@@ -42,17 +42,17 @@ class TestDolibarrPackage extends Command
                     $data = [
                         [
                             "Nom" => "API Url",
-                            "Valeur" => config('dolibarr_server')."/api/index.php",
+                            "Valeur" => config('dolibarr.dolibarr_server')."/api/index.php",
 
                         ],
 
                         [
                             "Nom" => "Utilisateur",
-                            "Valeur" => config('dolibarr_api_user'),
+                            "Valeur" => config('dolibarr.dolibarr_api_user'),
 
                         ],                        [
                             "Nom" => "Password",
-                            "Valeur" => config('dolibarr_api_password'),
+                            "Valeur" => config('dolibarr.dolibarr_api_password'),
 
                         ],                        [
                             "Nom" => "Token",
