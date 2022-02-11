@@ -45,10 +45,10 @@ class DolibarrServiceProvider extends ServiceProvider
              $this->commands([
                  InstallDolibarrPackage::class
              ]);
-
-             $this->commands([
-                 TestDolibarrPackage::class
-             ]);
+//
+//             $this->commands([
+//                 TestDolibarrPackage::class
+//             ]);
         }
     }
 
