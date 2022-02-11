@@ -5,7 +5,7 @@ use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;
 use Pmilinvest\Dolibarr\Dolibarr;
 
-class TestDolibarrPackage   extends Command
+class TestDolibarrPackage extends Command
 {
     protected $signature = 'dolibarr:test';
 

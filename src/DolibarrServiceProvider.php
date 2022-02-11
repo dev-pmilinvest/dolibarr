@@ -4,7 +4,7 @@ namespace Pmilinvest\Dolibarr;
 
 use Illuminate\Support\ServiceProvider;
 use Pmilinvest\Dolibarr\Console\InstallDolibarrPackage;
-use Pmilinvest\Dolibarr\Console\TestDolibarrPackage ;
+use Pmilinvest\Dolibarr\Console\TestDolibarrPackage;
 
 class DolibarrServiceProvider extends ServiceProvider
 {
