@@ -71,9 +71,9 @@ class TestDolibarrPackage extends Command
                     $clients = $this->dolibarr->getTiers('BBI',);
 
                     $this->info( 'Trouvé: ' . count($clients));
-                    dump($clients);
+
                     foreach($clients as $client) {
-                        // dump($client);
+                         dump($client);
 //            dump([
 //            'name' => $client['name'],
 //            'address' => $client['address'],
