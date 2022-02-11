@@ -26,11 +26,6 @@
             "Pmilinvest\\Dolibarr\\": "src"
         }
     },
-    "autoload-dev": {
-        "psr-4": {
-            "Pmilinvest\\Dolibarr\\Tests\\": "tests"
-        }
-    },
     "scripts": {
         "test": "vendor/bin/phpunit",
         "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
