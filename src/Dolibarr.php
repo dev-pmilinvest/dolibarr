@@ -108,6 +108,7 @@ class Dolibarr
                 "sqlfilters" => "(t.nom:like:'%".$societe."%')"
             )
         ));
+        dd($result);
 
         if (isset($result["error"]) ) {
             return [];
