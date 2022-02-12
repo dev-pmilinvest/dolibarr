@@ -33,7 +33,6 @@ Vous pouvez déjà commencez par vérifier que votre connection à l'API Dolibar
 ```php
  php artisan dolibarr:test
 ```
-
 Utilisez les flèches du clavier pour choisir l'option "Voir la configuration"
 
 
