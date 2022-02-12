@@ -62,7 +62,7 @@ Choisir la fonction API:
 
 ## Credits
 
--   [PMIL Invest](https://github.com/pmilinvest)
+-   [PMIL Invest](https://pmil.fr)
 -   dev2.info@pmilinvest.fr for his future prolific help ; Welcome gui !
 
 ## License
