@@ -12,9 +12,9 @@ Vous pouvez installer le package avec composer:
 
 ```bash
 composer require pmilinvest/dolibarr
+php artisan vendor:publish --tag=config
 ```
 
-## Configuration
 Renseignez la configuration minimale pour accéder à l'API Dolibarr dans votre fichier .env situé à la racine de votre application Laravel
 ```php
 #Configuration DOLIBAR API
@@ -28,15 +28,19 @@ DOLIBARR_API_PASSWORD=XXXXXXXX
 
 
 
-## Usage
-Vous pouvez vérifier que votre connection à l'API Dolibarr fonctionne en utilisan la commande artisan :
+## Utilisation
+Vous pouvez déjà commencez par vérifier que votre connection à l'API Dolibarr fonctionne correctement en utilisan la commande artisan :
 ```php
  php artisan dolibarr:test
 ```
 
 Utilisez les flèches du clavier pour choisir l'option "Voir la configuration"
 
+
 Si le token esr renseigné alors tout va bien !
+Il ne reste plus qu'a s'inspirer de code pour avancer.
+
+
 ```
 PMIL Invest Laravel Dolibarr Package
 ====================================
