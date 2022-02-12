@@ -61,21 +61,24 @@ class Dolibarr
         return json_decode($result, true);
     }
 
-    public function getAllUsers(){
-        // Récupérer la liste des produits
-        $listProduits = [];
-        $produitParam = ["limit" => 10000, "sortfield" => "rowid" ];
 
-        $listProduitsResult = $this->CallAPI("GET",  "users", $produitParam);
-        if (isset($listProduitsResult["error"]) && $listProduitsResult["error"]["code"] >= "300") {
-            dump($listProduitsResult);
-        } else {
-            foreach ($listProduitsResult as $produit) {
-                $listProduits[intval($produit["id"])] = html_entity_decode($produit["ref"], ENT_QUOTES);
-            }
-        }
-        return $listProduits;
-    }
+    // TODO: getAllProducts()
+
+//    public function getAllProducts(){
+//        // Récupérer la liste des produits
+//        $listProduits = [];
+//        $produitParam = ["limit" => 10000, "sortfield" => "rowid" ];
+//
+//        $listProduitsResult = $this->CallAPI("GET",  "users", $produitParam);
+//        if (isset($listProduitsResult["error"]) && $listProduitsResult["error"]["code"] >= "300") {
+//            dump($listProduitsResult);
+//        } else {
+//            foreach ($listProduitsResult as $produit) {
+//                $listProduits[intval($produit["id"])] = html_entity_decode($produit["ref"], ENT_QUOTES);
+//            }
+//        }
+//        return $listProduits;
+//    }
 
     public function login($login, $password, $reset = 0){
 

@@ -1,6 +1,6 @@
 {
     "name": "pmilinvest/dolibarr",
-    "description": "DOLIBARR LARAVEL SDK",
+    "description": "PMIL DOLIBARR API LARAVEL SDK",
     "keywords": [
         "pmilinvest",
         "dolibarr"
