@@ -15,7 +15,7 @@ composer require pmilinvest/dolibarr
 ```
 
 ## Configuration
-
+Renseignez la configuration minimale pour accéder à l'API Dolibarr dans votre fichier .env situé à la racine de votre application Laravel
 ```php
 #Configuration DOLIBAR API
 DOLIBARR_SERVER=https://XXX.XXX.XXX.XXX
