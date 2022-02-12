@@ -1,4 +1,7 @@
 <?php
+/*
+    Pour aller plus loin: https://wiki.dolibarr.org/index.php?title=Module_Web_Services_API_REST_(d%C3%A9veloppeur)
+*/
 
 namespace Pmilinvest\Dolibarr;
 
